@@ -1,0 +1,779 @@
+/* ==========================================NAV CSS========================================== */
+*{
+    padding: 0;
+    margin: 0;
+    --logo:#f91455;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fas.fa-arrow-circle-down{
+    display: none;
+    position: absolute;
+    left: 50%;
+    font-size: 30px;
+    bottom: 10px;
+    color: var(--logo);
+}
+
+
+.nav__contenedor-caracteres{
+    position: absolute;
+    display: flex;
+}
+.nav__titulos{
+    /* ======================== posicion ========================  */
+    position: absolute;
+    top: 32%;
+    left: 100%;
+
+    /* ======================== caracter ========================  */
+    color: var(--logo);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+
+}
+.nav__logo{
+    width: 70px;
+}
+
+.nav__contenedor-iconos{
+    position: absolute;
+    margin: auto;
+    left: 85%;
+    top: 25px;
+    font-size: 20px;
+}
+.nav__contenedor-iconos i{
+    color: var(--logo);
+}
+
+
+    /* ======================== slider ========================  */
+.nav__slider{
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 4px solid var(--logo);
+}
+.nav__slider ul {
+	display: flex;
+	padding: 0;
+	animation: cambio 20s infinite alternate;
+	width: 400%;
+}
+
+.nav__slider li {
+	width: 100%;
+	list-style: none;
+}
+.nav__slider img{
+	width: 100%;
+	height: 100%;
+}
+
+@keyframes cambio{
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+
+
+@media screen and (min-width:700px) {
+    .nav__titulos{
+        /* ======================== posicion ========================  */
+        position: absolute;
+        top: 30%;
+    
+        /* ======================== caracter ========================  */
+        color: var(--logo);
+        font-family: 'Poppins', sans-serif;
+        font-size: 22px;
+    
+    }
+    .nav__logo{
+        width: 78px;
+    }
+    
+    .nav__contenedor-iconos{
+        position: absolute;
+        margin: auto;
+        left: 90%;
+        top: 25px;
+        font-size: 22px;
+    }
+}
+@media screen and (min-width:1000px) {
+    .nav__titulos{
+        /* ======================== posicion ========================  */
+        position: absolute;
+        top: 30%;
+    
+        /* ======================== caracter ========================  */
+        color: var(--logo);
+        font-family: 'Poppins', sans-serif;
+        font-size: 25px;
+    
+    }
+    .nav__logo{
+        width: 82px;
+    }
+    
+    .nav__contenedor-iconos{
+        position: absolute;
+        margin: auto;
+        left: 94%;
+        top: 25px;
+        font-size: 25px;
+    }
+}
+
+
+
+*{
+    list-style:none;
+    --logo:#f91455;
+}
+
+/* Scroll */
+.section{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+
+/* Estilos contenedor */
+.contenedor{
+    width: 90%;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right:auto;
+    text-align: center;
+}
+.contenedor .ul{
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-left: auto;
+    margin-right:auto;
+    overflow-x: scroll;
+    
+}
+
+.contenedor .li{
+    width: 35%;
+    text-align: center;
+    transition: all .5 ease;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 30px;
+    padding: 0px 20px;
+
+
+}
+.contenedor .li.activo {
+    color: var(--logo);
+}
+.contenedor .subcontenedor{
+    position: relative;
+    height: 700px;
+    transition: all 15s ease-in;
+
+}
+.contenedor .bloque{
+    position: absolute;
+    top: 1em;
+    padding: 1em;
+    transform: translateY(50%);
+    transition: all .5 ease;
+    padding: 1em;
+    margin: 20px;
+
+    opacity: 0;
+    display: none;
+
+
+}
+
+.contenedor .bloque.activo{
+    opacity: 1;
+    transform: translateY(0%);
+    display: block;
+}
+.li:hover{
+    color: var(--logo);
+    
+}
+
+.contenedor .ul::-webkit-scrollbar{
+    border-radius: 10px;
+    background-color:#ffffff11;
+    max-height: 7px;
+    width: 7px;
+}
+.contenedor .ul::-webkit-scrollbar-thumb{
+    background-color:var(--logo);
+    border-radius: 5px;
+}
+
+
+/* =================================MAINCSS================================= */
+*{
+    padding: 0;
+    margin: 0;
+    --logo:#f91455;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.titulo__productos{
+    display: inline-block;
+    position: relative;
+    left: 33%;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 25px;
+    color: var(--logo);
+    text-transform:uppercase;
+
+    margin:50px 0 20px 0;
+    padding: 5px;
+
+}
+
+
+
+.section{
+    background: url(fondopc.png);
+    background-size: 100%; 
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+@media screen and (max-width:700px){
+    .section{
+        background: url(fondomb.png);
+        background-size: 100%;
+        max-height: 600px;
+
+    }    
+}
+
+
+
+body{
+    overflow-x: hidden;
+}
+.contenedor{
+    color: #fff;
+}
+
+.carrusel{
+    width: 70%;
+}
+
+
+/* ================== Carrusel 1 ================== */
+.carrusel .carrusel__contenedor{
+    width: 500%;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    transition: all .6s ease;
+    transform: translateX(-20%);
+
+}
+.carrusel .carrusel__img{
+    width: calc(100%/5 - 1em);
+}
+.carrusel .puntos{
+    width: 100%;
+    padding: 1em;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+.carrusel .punto{
+    width: 5px;
+    height: 5px;
+    padding: 10px;
+    margin: 5px;
+
+    color: var(--logo);
+    font-size: 30px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carrusel .punto.activar{
+    background-color: var(--logo);
+
+}
+/* =============== Informacion Uno =============== */
+.informacion__imagenes{opacity: 0;}
+
+/* .infoimg{
+    opacity: 1;
+    color: var(--logo);
+    
+    position: relative;
+    top: auto;
+    right: 11%;
+
+    z-index: 15;
+
+    font-size: 18px;
+    margin: 0;
+    padding: 5px;
+
+    background-color: #f2f2f288;
+    border-radius: 5px;
+    font-weight: 700;
+} */
+.zoomImg{
+   transform:scale(1.1);
+}
+
+
+
+
+/* ================== Carrusel dos ================== */
+.carrusel2{
+    width: 70%;
+}
+
+.carrusel2 .carrusel__contenedor2{
+    width: 500%;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    transition: all .6s ease;
+    transform: translateX(-20%);
+
+}
+.carrusel2 .carrusel__img2{
+    width: calc(100%/5 - 1em);
+}
+.carrusel2 .puntos2{
+    width: 100%;
+    padding: 1em;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+.carrusel2 .punto2{
+    width: 5px;
+    height: 5px;
+    padding: 10px;
+    margin: 5px;
+
+    color: var(--logo);
+    font-size: 30px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.carrusel2 .punto2.activar2{
+    background-color: var(--logo);
+
+}
+
+
+/* ================== Carrusel Tres ================== */
+.carrusel3{
+    width: 90%;
+}
+
+.carrusel3 .carrusel__contenedor3{
+    width: 500%;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    transition: all .6s ease;
+    transform: translateX(-20%);
+
+}
+.carrusel3 .carrusel__img3{
+    width: calc(100%/5 - 1em);
+}
+.carrusel3 .puntos3{
+    width: 100%;
+    padding: 1em;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+.carrusel3 .punto3{
+    width: 5px;
+    height: 5px;
+    padding: 10px;
+    margin: 5px;
+
+    color: var(--logo);
+    font-size: 30px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.carrusel3 .punto3.activar3{
+    background-color: var(--logo);
+
+}
+/* ================== Carrusel Cuatro ================== */
+.carrusel4{
+    width: 90%;
+}
+
+.carrusel4 .carrusel__contenedor4{
+    width: 500%;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    transition: all .6s ease;
+    transform: translateX(-20%);
+
+}
+.carrusel4 .carrusel__img4{
+    width: calc(100%/5 - 1em);
+}
+.carrusel4 .puntos4{
+    width: 100%;
+    padding: 1em;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+.carrusel4 .punto4{
+    width: 5px;
+    height: 5px;
+    padding: 10px;
+    margin: 5px;
+
+    color: var(--logo);
+    font-size: 30px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.carrusel4 .punto4.activar4{
+    background-color: var(--logo);
+
+}
+/* ================== Carrusel Quinto ================== */
+.carrusel5{
+    width: 90%;
+}
+
+.carrusel5 .carrusel__contenedor5{
+    width: 500%;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    transition: all .6s ease;
+    transform: translateX(-25%);
+
+}
+.carrusel5 .carrusel__img5{
+    width: calc(100%/5 - 1em);
+}
+.carrusel5 .puntos5{
+    width: 100%;
+    padding: 1em;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+.carrusel5 .punto5{
+    width: 5px;
+    height: 5px;
+    padding: 10px;
+    margin: 5px;
+
+    color: var(--logo);
+    font-size: 30px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.carrusel5 .punto5.activar5{
+    background-color: var(--logo);
+
+}
+/* ================== Carrusel Sexto ================== */
+.carrusel6{
+    width: 100%;
+}
+
+.carrusel6 .carrusel__contenedor6{
+    width: 400%;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    transition: all .6s ease;
+    transform: translateX(-25%);
+
+}
+.carrusel6 .carrusel__img6{
+    width: calc(100%/4 - 1em);
+}
+.carrusel6 .puntos6{
+    width: 100%;
+    padding: 1em;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+.carrusel6 .punto6{
+    width: 5px;
+    height: 5px;
+    padding: 10px;
+    margin: 5px;
+
+    color: var(--logo);
+    font-size: 30px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.carrusel6 .punto6.activar6{
+    background-color: var(--logo);
+
+}
+
+.carrusel6 .zoomImg{
+    transform:scale(1.2);
+ }
+
+ /* ==========================================MEDIA Query========================================== */
+ @media screen and (min-width: 200px) {
+    .carruselGeneral {
+      width: 50%;
+    }
+    
+  }
+  @media screen and (min-width: 300px) {
+    .carruselGeneral {
+      width: 50%;
+    }
+    .carrusel2{
+      width: 45%;
+  }
+    
+  }
+  @media screen and (min-width: 400px) {
+    .carruselGeneral {
+      width: 50%;
+    }
+    .carrusel2{
+      width: 45%;
+  }
+    
+  }
+  @media screen and (min-width: 500px) {
+    .carruselGeneral {
+      width: 50%;
+    }
+    .titulo__productos{
+      font-size: 30px;
+      left: 35%;
+  
+    }
+  }
+  @media screen and (min-width: 600px) {
+    .carruselGeneral {
+      width: 42%;
+    }
+    .titulo__productos{
+      font-size: 30px;
+      left: 42%;
+    }
+  }
+  @media screen and (min-width: 700px) {
+    .carruselGeneral {
+      width: 50%;
+    }
+    
+  }
+  @media screen and (min-width: 850px) {
+    .carruselGeneral {
+      width: 45%;
+    }
+    
+  }
+  
+  @media screen and (min-width: 1000px) {
+    .carruselGeneral {
+      width: 40%;
+    }
+    .fas.fa-arrow-circle-down{
+      display: block;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .carruselGeneral {
+      width: 30%;
+    }
+  }
+  @media screen and (min-width: 1520px) {
+    .carruselGeneral {
+      width: 25%;
+    }
+  }
+  @media screen and (min-width: 1820px) {
+    .carruselGeneral {
+      width: 23%;
+    }
+  }
+  
+
+  /* ====================================NOTICIAS CSS==================================== */
+  :root{
+    --logo:#f91455;        
+    --neon:rgb(245,181,99);
+
+}
+
+
+.indalecio__noticias{
+    border-top: 5px solid var(--logo);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.btn-neon{
+   
+    padding: 15px 30px;    
+    
+    margin: auto 10%;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-family: 'Pirata One', cursive;    
+    font-weight: bold;
+    color: var(--neon);
+    /* color: #222; */
+    -webkit-text-stroke: .1px #222;
+}
+.direccion{
+    font-size: 10px;
+}
+.btn-neon2{
+   
+    padding: 15px 30px;    
+    
+    margin: auto ;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: var(--neon);
+}
+@media (min-width:760px){
+    .btn-neon{
+        font-size: 60px;
+    }
+    .direccion{
+        font-size: 20px;
+    
+    }
+}
+@media (min-width:1000px){
+    .btn-neon{
+        font-size: 50px;
+    }
+    .direccion{
+        font-size: 17px;
+    
+    }
+}
+
+.creditos__ceo-div{
+    display: flex;
+    justify-content: space-evenly;
+    
+
+    color: var(--neon);
+    text-align: center;
+}
+.creditos__ceo-div p{
+    padding: 15px;
+    position: relative;
+}
